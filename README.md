@@ -43,4 +43,4 @@ We welcome contributions! To contribute to **LinguaSub AI**:
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
-*Created with ❤️ by Antigravity*
+*Created with ❤️ by Reema*
