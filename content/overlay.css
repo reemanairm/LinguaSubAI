@@ -1,0 +1,56 @@
+/**
+ * Overlay CSS for subtitles injected over the video
+ */
+
+.ai-subtitle-overlay {
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 2147483647 !important;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.ai-subtitle-text {
+    font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 8px;
+    line-height: 1.4;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(0, 0, 0, 0.5);
+    /* Good readable text shadow */
+    max-width: 85%;
+    word-wrap: break-word;
+    /* Ensure long lines break safely */
+    opacity: 0;
+    /* Hidden initially, toggled by JS */
+    transition: opacity 0.15s ease-in-out;
+}
+
+/* Make it responsive for different player sizes */
+@media (max-width: 800px) {
+    .ai-subtitle-text {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .ai-subtitle-text {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
